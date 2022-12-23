@@ -1,0 +1,98 @@
+
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 600px;
+  text-align: center;
+}
+.formWrapper__headerText {
+  font-size: 5em;
+  color: var(--white);
+  font-weight: 400;
+  padding: 2rem 0;
+}
+.formWrapper__tagline {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 1.5em;
+  padding: 1rem 0;
+}
+.formOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.formOption__checkBox {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.formOption__checkBox input[type="checkbox"] {
+  background: var(--black) !important;
+  border-radius: 0.2rem;
+}
+.formOption__checkBox label {
+  font-size: 1.2em;
+  color: var(--white);
+  font-weight: 500;
+}
+.formOption__forgotPassword {
+  color: var(--green);
+  font-weight: 500;
+}
+.btn {
+  color: var(--white);
+  margin: 1rem auto;
+  display: block;
+  width: 300px;
+  padding: 0.6rem 0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+.btn-green {
+  background-color: var(--green);
+}
+.btn-green:hover {
+  background-color: transparent;
+  border: 1px solid var(--green);
+}
+@media (max-width: 400px) {
+  .btn {
+    width: 90%;
+  }
+}
+.formInput {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .formInput__input {
+    padding: 0.7rem;
+    background: #224957;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    width: 300px;
+  }
+  .formInput__input,
+  .formInput__input::placeholder {
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .formInput__input:focus {
+    border: 1px solid #20df7f;
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 450px) {
+    .formInput__input {
+      width: 90vw;
+    }
+  }

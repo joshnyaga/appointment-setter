@@ -1,0 +1,203 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Light-Gray: hsl(204, 43%, 93%);
+  --Grayish-Blue: hsl(218, 22%, 67%);
+  --border-radius: 6px;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 70px;
+  background-color: var(--Light-Gray);
+}
+
+.card-wrapper {
+  max-width: 90%;
+  margin: auto;
+  text-align: start;
+  overflow: hidden;
+  border-radius: calc(var(--border-radius) + 2px);
+  box-shadow: 4px 10px 15px hsla(217, 22%, 67%, 0.438);
+}
+
+@media (min-width: 767px) {
+  .card-wrapper {
+    max-width: 640px;
+  }
+}
+.card-wrapper .card-summary {
+  background-color: #fff;
+  padding: 30px 25px;
+}
+
+@media (min-width: 767px) {
+  .card-wrapper .card-summary {
+    padding: 45px 40px;
+  }
+}
+
+.card-summary h1 {
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.card-summary h2 {
+  color: var(--green);
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+@media (min-width: 767px) {
+  .card-summary h2 {
+    margin-bottom: 10px;
+  }
+}
+
+.card-summary p {
+  color: var(--Grayish-Blue);
+  line-height: 1.7;
+}
+
+@media (min-width: 767px) {
+  .card-wrapper .card-features {
+    display: flex;
+  }
+}
+
+.card-wrapper .card-features > div {
+  padding: 30px 24px;
+  color: var(--Light-Gray);
+}
+
+@media (min-width: 767px) {
+  .card-wrapper .card-features > div {
+    padding: 40px;
+    flex: 1;
+  }
+}
+
+.card-features .feature-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #fff;
+}
+
+.card-features .subscribtion {
+  background-color: var(--black);
+}
+
+.card-features .why-us {
+  background-color: var(--black);
+}
+
+.subscribtion .pricing-plan p:first-child {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.subscribtion .pricing-plan p:first-child span {
+  font-weight: 700;
+  font-size: 35px;
+  color: #fff;
+  margin-right: 15px;
+}
+
+.subscribtion .btn {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 15px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: #fff;
+  background-color: var(--green);
+  border-radius: var(--border-radius);
+  transition: 200ms linear;
+}
+
+.subscribtion .btn:hover {
+  background-color: var(--Light-green);
+}
+
+.why-us ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+/* Start Attribution Styles [NOT Related To Project Styles And Can Be Deleted] */
+
+.attribution {
+  color: var(--black);
+  font-size: 1rem;
+  text-align: center;
+  padding: 70px 0 50px 0;
+  background-color: var(--Light-Gray);
+}
+
+.attribution .outer-link {
+  color: var(--black);
+  margin-left: 0.0625rem;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.attribution .outer-link:hover {
+  color: var(--black);
+
+  cursor: pointer;
+}
+
+.attribution .social-media {
+  list-style: none;
+  margin-left: 0.3125rem;
+  margin-top: 0.578rem;
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.attribution .social-media img {
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.attribution .social-media img:hover {
+  transform: scale(1.08);
+}
+
+.attribution .social-media img.light {
+  filter: invert(1);
+}
+
+/* End Attribution */

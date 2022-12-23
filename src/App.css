@@ -1,38 +1,208 @@
-.App {
+.styled-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+.styled-table thead tr {
+  color: var(--green);
+  border-radius: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.styled-table th {
+  padding: 0.5rem 1rem;
+}
+.styled-table td {
+  padding: 0.5rem 1rem;
+  color: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  border-radius: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #1d1c1c;
+  border-radius: 10px;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid var(--green);
+  border-radius: 10px;
+}
+.styled-table tbody tr.active-row {
+  font-weight: bold;
+  color: var(--green);
+}
+.styled-table tbody tr:hover {
+  color: var(--green);
+}
+.heading.center {
+  text-align: center;
+}
+.searchbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+}
+.logo {
+  position: relative;
+  width: 70px;
+  display: flex;
+  gap: 1rem;
+  color: #fff;
+}
+.logo img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--white);
+}
+.nav-item:hover {
+  color: var(--green);
+}
+.active{
+  color: var(--green);
+}
+
+.formWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 600px;
+  text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.formWrapper__headerText {
+  font-size: 3em;
+  color: var(--white);
+  font-weight: 400;
+  margin: 1rem 0;
+  margin-top: 5rem;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.formWrapper__tagline {
+  font-weight: 400;
+  color: var(--white);
+  font-size: 1.5em;
+  padding: 1rem 0;
+}
+.formOptions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.formOption__checkBox {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.formOption__checkBox input[type="checkbox"] {
+  background: var(--black) !important;
+  border-radius: 0.2rem;
+}
+.formOption__checkBox label {
+  font-size: 1.2em;
+  color: var(--white);
+  font-weight: 500;
+}
+.formOption__forgotPassword {
+  color: var(--green);
+  font-weight: 500;
+}
+.btn {
+  color: var(--white);
+  margin: 1rem auto;
+  display: block;
+  width: 300px;
+  padding: 0.6rem 0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-family: "Lexend Deca", sans-serif;
+}
+.btn-green {
+  background-color: var(--green);
+  text-align: center;
+}
+.btn-green:hover {
+  background-color: transparent;
+  border: 1px solid var(--green);
+}
+.btn-red {
+  background-color: darkred;
+}
+.btn-red:hover {
+  background-color: transparent;
+  border: 1px solid darkred;
+}
+@media (max-width: 400px) {
+  .btn {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
-  }
 }
+.formInput {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .formInput__input {
+    padding: 0.7rem;
+    background: #224957;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    width: 300px;
+  }
+  .formInput__input_textarea{
+    padding: 2rem 1rem;
+    background: #224957;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    width: 300px;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+  }
+  .formInput__input,
+  .formInput__input::placeholder {
+    font-size: 1em;
+    color: #fff;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+  }
+  .formInput__input:focus {
+    border: 1px solid #20df7f;
+  }
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 450px) {
+    .formInput__input {
+      width: 90vw;
+    }
+  }
